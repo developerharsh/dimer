@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+       
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #999;
+}
+        </style>
+    <title>User Profile</title>
+    
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css ">
+	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+
+      title:{
+      text: "Health Record Analysis"
+      },
+      axisX: {
+      	valueFormatString: "DDD",
+        interval:1,
+        intervalType: "day",
+        title:"Days"
+      },
+      axisY:{
+        includeZero: false,
+        suffix: "%",
+        title:"Effectiveness of Medicine"
+
+      },
+      data: [
+      {
+        type: "line",
+
+        dataPoints: [
+        { x: new Date(2017, 10, 23), y: 0 },
+        { x: new Date(2017, 10, 24), y: 20 },
+        { x: new Date(2017, 10, 25), y: 40 },
+        { x: new Date(2017, 10, 26), y: 70 },
+        { x: new Date(2017, 10, 27), y: 100 }
+        
+        ]
+      }
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
+ <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+
+		<nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/">Dimer</a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                
+                            
+                                <li><a href="/show">Signed In As Govind</a></li>
+                                <li><a href="/logout">Logout</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+	<div class="container">
+   		 <div class="row">
+    		<div class="col-lg-3">
+    			<img  src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-1/p160x160/26814674_164241434201307_1344785226739305922_n.jpg?oh=a54d0c94a7fce488a4e5f3eec2220ca8&oe=5B3A15CE " alt="" class="img-rounded img-responsive" />
+                <br>
+                <div>
+                <h4>Govind Chaudhary</h4>
+                        <small><cite title="Delhi,India">Shalimar Bagh, Delhi <i class="glyphicon glyphicon-map-marker">
+                        </i></cite></small>
+                        <p>
+                            <i class="glyphicon glyphicon-envelope"></i>govindchaudhary2404@gmail.com
+                            <br />
+                            <i class="glyphicon glyphicon-gift"></i>Mar 28, 1999<br>
+                            <i class="glyphicon fa fa-phone-square" aria-hidden="false"></i>8376947437</p>
+                             <div class="btn-group">
+
+             </div>
+             </div>
+    			
+    			
+    		</div>
+    	 <div class="col-lg-3">
+    		 
+             </div>
+             <div class="col-md-6">
+           	  	<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+           	  </div>
+
+    	</div>
+    </body>
+  
+    </html>
